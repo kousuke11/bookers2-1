@@ -1,0 +1,17 @@
+<%= render 'books/error', model: @user %>
+<h2>User info</h2>
+<%= form_with model: @user do |f| %>
+<div>
+  <label for="inputName">Name</label><br>
+  <%= f.text_field :name %>
+</div>
+<div>
+  <label for="inputImage">Image</label><br>
+  <%= f.file_field :profile_image, accept: "image/*" %>
+</div>
+<div>
+  <label for="inputIntroduction">Introduction</label><br>
+  <%= f.text_area :introduction %>
+</div>
+  <%= f.submit "Update User" %>
+<% end %>
